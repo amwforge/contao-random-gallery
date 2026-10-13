@@ -1,6 +1,6 @@
 {
     "name": "amwforge/contao-random-gallery",
-    "description": "Contao Inhaltselement für eine Galerie mit Zufalssbildern",
+    "description": "Contao content element for a gallery of random images",
     "keywords": [
         "contao",
         "bundle",
