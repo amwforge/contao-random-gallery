@@ -1,0 +1,73 @@
+.content-amw-random-gallery {
+    text-align: center;
+
+    .amw-rg-image {
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+        margin: 2px 0;
+
+        figure {
+            position: relative;
+            height: 100%;
+        }
+        img {
+            height: 100%;
+            width: auto;
+        }
+        a img {
+            cursor: pointer;
+            transition: .3s;
+            filter: brightness(100%);
+            &:hover {
+                filter: brightness(70%);
+            }
+        }
+        figcaption {
+            position: absolute;
+            left: 20px;
+            bottom: 30px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #E7C07C;
+            text-align: left;
+            text-shadow: 2px 1px #000;
+            hyphens: auto;
+        }
+        &.more {
+            margin: 2px;
+        }
+    }
+    .amw-rg-more {
+        margin: 50px 0 20px;
+        &.hidden { display: none; }
+        a {
+            padding: 8px 25px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            transition: .3s;
+        }
+        a:hover {
+            
+            background: #ccc;
+        }
+    }
+    .loading {
+        display: none;
+        margin: 40px auto 10px auto;
+        &.visible { display: inline-block; }
+        .inside {
+            width: 40px;
+            height: 40px;
+            background: url(../img/spinner-solid-grey.svg) no-repeat center / 100%;
+            animation: rotation 1.5s linear infinite;
+        }
+    } 
+}
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

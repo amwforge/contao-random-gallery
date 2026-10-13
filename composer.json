@@ -1,0 +1,56 @@
+{
+    "name": "amwforge/contao-random-gallery",
+    "description": "Contao Inhaltselement für eine Galerie mit Zufalssbildern",
+    "keywords": [
+        "contao",
+        "bundle",
+        "content-element",
+        "gallery"
+    ],
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Andreas Maier",
+            "email": "mail@maier-digital.de",
+            "homepage": "https://maier-digital.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/amwforge/contao-random-gallery/issues",
+        "source": "https://github.com/amwforge/contao-random-gallery"
+    },
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^5.3 || ^6.0"
+    },
+    "require-dev": {
+        "contao/easy-coding-standard": "^6.13",
+        "contao/manager-plugin": "^2.12",
+        "contao/test-case": "^5.3 || ^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amwforge\\ContaoRandomGallery\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "contao-community-alliance/composer-plugin": true,
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Amwforge\\ContaoRandomGallery\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "unit-tests": "@php tools/phpunit/vendor/bin/phpunit -c tools/phpunit/phpunit.xml.dist",
+        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check config/ contao/ src/ templates/ tests/ --config tools/ecs/config/default.php --fix --ansi"
+    },
+    "version": "1.0"
+}

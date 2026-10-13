@@ -1,0 +1,29 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% block content %}
+    {% use "@Contao/component/_figure.html.twig" %}
+    
+    <div class="image-container">
+    
+        {% for img in images %}
+        <div class="amw-rg-image">
+            {% set image = figure(img.path, [imgWidth, imgHeight, 'crop'], {
+                'enableLightbox': enableLightbox,
+                'lightboxGroupIdentifier': 'randomGallery'
+                }
+            ) %}
+            {% if image %}
+                {% with {figure: image} %}{{ block('figure_component') }}{% endwith %}
+            {% endif %}
+        </div>
+        {% endfor %}
+        
+    </div>
+    
+    {% if moreImages %}  
+        <div class="amw-rg-more">
+            <a href="#" id="btn-amw-link-more">Mehr Bilder anzeigen</a>
+        </div>
+        <div class="loading"><div class="inside"></div></div>
+    {% endif %}
+{% endblock %}
