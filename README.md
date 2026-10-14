@@ -10,7 +10,7 @@
 
 <hr>
 
-- Images or folders can be added as a source, but no subfolders are processed
+- Images or folders can be added as a source, but no subfolders are processed.
 - To display the images in a lightbox, jQuery and the j _ colorbox template must be activated in the theme.
 
 <hr>
